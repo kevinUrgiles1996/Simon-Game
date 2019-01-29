@@ -23,9 +23,13 @@ $(document).keypress(function() {
 $(".btnStart").bind("click", function() {
 
   if (!gameStarted) {
-    nextSequence();
-    gameStarted = true;
     $('.btn').show();
+    setTimeout(function(){
+
+      nextSequence();
+      gameStarted = true;
+
+    },500);
 
   }
 
