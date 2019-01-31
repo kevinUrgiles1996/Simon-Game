@@ -33,7 +33,7 @@ function checkAnswer(currentLevel){
 
 
      if(gamePattern.length === userClickPattern.length){
-       setTimeout(function(){nextSequence()},500);
+       setTimeout(function(){nextSequence()},1000);
 
      }
 
@@ -61,7 +61,7 @@ function nextSequence(){
   var randomNumber = Math.floor(Math.random()*4);
   var color = gameColors[randomNumber];
   gamePattern.push(color);
-  animatePress(color);
+  $("#" + color).fadeOut(100).fadeIn(100);
   playSound(color);
 
 
